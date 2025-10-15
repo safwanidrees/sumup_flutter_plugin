@@ -15,17 +15,14 @@
     android:name="io.purplesoft.sumup.SumupApplication">
     <activity
       android:name="com.sumup.merchant.reader.identitylib.ui.activities.LoginActivity"
-      android:exported="false"
-      android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+      android:exported="false" />
     
     <activity
       android:name="com.sumup.merchant.reader.identitylib.ui.activities.CardReaderPageActivity"
-      android:exported="false"
-      android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+      android:exported="false" />
     
     <activity
       android:name="com.sumup.merchant.reader.identitylib.ui.activities.CheckoutActivity"
-      android:exported="false"
-      android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+      android:exported="false" />
   </application>
 </manifest>
