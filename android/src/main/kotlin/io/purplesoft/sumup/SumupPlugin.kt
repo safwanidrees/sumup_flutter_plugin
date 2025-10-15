@@ -94,8 +94,8 @@ class SumupPlugin : FlutterPlugin, MethodCallHandler, ActivityAware, PluginRegis
     private fun initSDK(@NonNull key: String): SumUpPluginResponseWrapper {
         val currentOp = operations["initSDK"]!!
         try {
-            // SumUp SDK is already initialized in Application class
-            // Just set the affiliate key here
+            // Initialize SumUp SDK here instead of in Application class
+            SumUpState.init(activity.applicationContext)
             affiliateKey = key
             currentOp.response.message = mutableMapOf("initialized" to true)
             currentOp.response.status = true

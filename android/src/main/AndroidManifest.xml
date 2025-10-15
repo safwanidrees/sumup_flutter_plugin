@@ -11,8 +11,7 @@
   <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
   
   <!-- SumUp SDK activities -->
-  <application
-    android:name="io.purplesoft.sumup.SumupApplication">
+  <application>
     <activity
       android:name="com.sumup.merchant.reader.identitylib.ui.activities.LoginActivity"
       android:exported="false" />
