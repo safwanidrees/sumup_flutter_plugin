@@ -1,3 +1,31 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="io.purplesoft.sumup">
+  
+  <!-- SumUp SDK requires these permissions -->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.BLUETOOTH" />
+  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  
+  <!-- SumUp SDK activities -->
+  <application
+    android:name="io.purplesoft.sumup.SumupApplication">
+    <activity
+      android:name="com.sumup.merchant.reader.identitylib.ui.activities.LoginActivity"
+      android:exported="false"
+      android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    
+    <activity
+      android:name="com.sumup.merchant.reader.identitylib.ui.activities.CardReaderPageActivity"
+      android:exported="false"
+      android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    
+    <activity
+      android:name="com.sumup.merchant.reader.identitylib.ui.activities.CheckoutActivity"
+      android:exported="false"
+      android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+  </application>
 </manifest>

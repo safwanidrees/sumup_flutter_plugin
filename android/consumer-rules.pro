@@ -68,3 +68,21 @@
 -dontwarn io.opentelemetry.sdk.trace.export.SpanExporter
 -dontwarn io.opentelemetry.semconv.SemanticAttributes
 -dontwarn kotlinx.parcelize.Parcelize
+
+# SumUp SDK specific rules
+-keep class com.sumup.merchant.reader.** { *; }
+-keep class com.sumup.merchant.reader.api.** { *; }
+-keep class com.sumup.merchant.reader.identitylib.** { *; }
+-keep class com.sumup.merchant.reader.models.** { *; }
+-keep class com.sumup.merchant.reader.di.** { *; }
+
+# Keep SumUp SDK activities
+-keep class com.sumup.merchant.reader.identitylib.ui.activities.** { *; }
+
+# Keep SumUp SDK components
+-keep class com.sumup.merchant.reader.di.dagger.DaggerHandler { *; }
+-keep class com.sumup.merchant.reader.di.dagger.ReaderComponent { *; }
+
+# Keep SumUp SDK initialization
+-keep class com.sumup.merchant.reader.api.SumUpState { *; }
+-keep class com.sumup.merchant.reader.api.SumUpAPI { *; }
